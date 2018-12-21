@@ -46,6 +46,7 @@ class SMBConnection(SMB):
                                       The default parameter is False which will use NetBIOS over TCP/IP for wider compatibility (TCP port: 139).
         """
         SMB.__init__(self, username, password, my_name, remote_name, domain, use_ntlm_v2, sign_options, is_direct_tcp)
+        print("CREATING MY SMB OBJECT")
         self.sock = None
         self.auth_result = None
         self.is_busy = False
